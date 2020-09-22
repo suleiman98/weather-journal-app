@@ -134,7 +134,7 @@ document.querySelector("#generateMore").addEventListener("click", function () {
 
 // Async GET data
 const getData = async (url, zip, apiKey) => {
-  const res = await fetch(`${url}${zip},us&appid=${apiKey}`);
+  const res = await fetch(`${url}${zip},us&units=metric&appid=${apiKey}`);
 
   try {
     const data = await res.json();
