@@ -1,0 +1,244 @@
+/* ---- Base Rules ---- */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  /* background: #f7f7f8; */
+  background-image: url(penguins.jpg);
+  background-size: cover;
+  font-family: "Baloo Chettan 2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body,
+article,
+header,
+main,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- app-title ---- */
+
+.title {
+  text-align: center;
+  color: lightcoral;
+  font-size: 2rem;
+}
+
+/* ---- App wrapper ---- */
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30%;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+}
+
+@media (max-width: 1125px) {
+  #app {
+    width: 40%;
+  }
+}
+
+@media (max-width: 960px) {
+  #app {
+    width: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  #app {
+    width: 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  #app {
+    width: 70%;
+  }
+}
+
+@media (max-width: 540px) {
+  #app {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    width: 100%;
+  }
+}
+
+#form,
+#entryHolder {
+  width: 70%;
+  margin: auto;
+  height: 394.2px;
+}
+
+/* ---- Form styles ---- */
+
+#form {
+  padding: 0.5rem 1rem;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(72, 105, 144, 1) 100%
+  );
+}
+
+.zip,
+.feel {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+input,
+textarea,
+#generate,
+#generateMore {
+  font-family: inherit;
+  padding: 0.5rem;
+  font-size: inherit;
+  border: 1px solid #eee;
+  outline: none;
+  width: 100%;
+  border-radius: 3px;
+}
+
+#generate,
+#generateMore {
+  cursor: pointer;
+  background: #fff;
+}
+
+#generate:hover,
+#generateMore:hover {
+  border: 1px solid #fff;
+  background: #eee;
+}
+
+/* ---- Entry Holder styles ---- */
+
+#entryHolder {
+  display: none;
+  background: #fff;
+  color: #6e6969;
+  box-shadow: 0 0 4px 0 rgba(17, 22, 26, 0.16),
+    0 2px 4px 0 rgba(17, 22, 26, 0.08), 0 4px 8px 0 rgba(17, 22, 26, 0.08);
+}
+
+#entryHolder > * {
+  display: grid;
+  gap: 1.4rem;
+}
+
+#entryHolder header,
+#entryHolder main {
+  padding: 0.5rem 1rem;
+}
+
+#entryHolder header {
+  display: flex;
+  flex-direction: column;
+}
+
+#entryHolder header > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 25px;
+  cursor: pointer;
+}
+
+#name,
+#date,
+#type {
+  font-weight: 400;
+}
+
+#entryHolder main {
+  color: #fff;
+  display: grid;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(72, 105, 144, 1) 100%
+  );
+}
+
+.type {
+  display: flex;
+  align-items: center;
+}
+
+.wi {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+#type {
+  font-size: 2.3rem;
+}
+
+#date {
+  text-align: center;
+  margin-top: -1rem;
+}
+
+.temp {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.main-temp {
+  grid-row: 1/3;
+}
+
+#temp {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.other-temp {
+  grid-row: 2/3;
+}
+
+#temp_max {
+  border-bottom: 1px solid #aaa;
+}
+
+#temp_max,
+#temp_min {
+  font-weight: 400;
+}
+
+#content {
+}

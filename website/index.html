@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Journal App</title>
+    <!--base font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!--Weather icons library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article id="app">
+      <div id="form">
+        <div class="zip">
+          <label for="zip">Enter zip code</label>
+          <input type="text" id="zip" placeholder="Enter zip code" />
+        </div>
+        <div class="feel">
+          <label for="feelings">how are you feeling?</label>
+          <textarea
+            name="feelings"
+            id="feelings"
+            cols="30"
+            rows="8"
+            placeholder="Enter mood"
+          ></textarea>
+        </div>
+        <button id="generate">Generate</button>
+      </div>
+      <div id="entryHolder">
+        <header>
+          <div>
+            <img src="hamburger.svg" alt="hamburger" />
+            <h2 id="name"></h2>
+            <img src="add.svg" alt="add" />
+          </div>
+          <h5 id="date"></h5>
+        </header>
+        <main>
+          <div class="type">
+            <i class="wi"></i>
+            <h2 id="type"></h2>
+          </div>
+          <div class="temp">
+            <div class="main-temp">
+              <h1 id="temp"></h1>
+            </div>
+            <div class="other-temp">
+              <h4 id="temp_max"></h4>
+              <h4 id="temp_min"></h4>
+            </div>
+          </div>
+          <div id="content"></div>
+        </main>
+        <button id="generateMore">Generate More</button>
+      </div>
+    </article>
+    <script src="app.js"></script>
+  </body>
+</html>
